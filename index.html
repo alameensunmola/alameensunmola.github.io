@@ -1,134 +1,202 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Alameen Sunmola Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <head>
+        <title>Alameen Sunmola Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        
+        <style>
+            /* Container to align Text and Image side-by-side */
+            .hero-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 50px; /* Space between text and image */
+                max-width: 1200px;
+                margin: 0 auto;
+                text-align: left; /* Align text to the left */
+            }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+            .hero-text {
+                flex: 1; /* Takes up remaining space */
+            }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Alameen Sunmola Portfolio<br />
-						</h1>
-						<p>Data Analyst with hands-on experience transforming raw data into actionable business insights. 
-								Skilled in SQL,Tableau, and Python, with a focus on data storytelling and helping organizations make data-driven decisions. 
-									Passionate about analytics, continuous learning, and using data to solve real-world business challenges.
-							</p>
+            /* Ensure the title looks good in this layout */
+            .hero-text h1 {
+                font-size: 3.5rem;
+                line-height: 1.1;
+                margin-bottom: 20px;
+            }
 
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+            /* Circular Image Styling */
+            .hero-image {
+                flex: 0 0 300px; /* Fixed width for image area */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Alameen Sunmola</a>
-					</header>
+            .photo-ring {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.2); /* The translucent outer ring */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(5px);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							<li><a href="https://twitter.com/ademola_aabs" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/alameensunmola" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+            .photo-ring img {
+                width: 270px;
+                height: 270px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 6px solid #ffffff; /* The solid white inner border */
+                display: block;
+            }
 
-				<!-- Main -->
-					<div id="main">
+            /* Responsive Design: Stack them on mobile */
+            @media screen and (max-width: 980px) {
+                .hero-container {
+                    flex-direction: column-reverse; /* Image on top, text below */
+                    text-align: center;
+                    gap: 30px;
+                }
+                
+                .hero-text h1 {
+                    font-size: 2.5rem; 
+                }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql">Covid19 Data Exploration<br />
-									</a></h2>
-									<p>In this Project, I performed data exploration using two COVID-19 datasets, one which contains COVID-19 Vaccination data,
-										 and the other which contains COVID-19 cases and deaths data using Microsoft SQL server.
-										 I was able to use my SQL knowledge to write queries that helped me gain meaningful insights from the datasets.</p>
-								</header>
-								<a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" class="image main"><img src="images/corona pic.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" class="button large">View Project</a></li>
-								</ul>
-							</article>
+                .photo-ring {
+                    width: 220px;
+                    height: 220px;
+                }
+                .photo-ring img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        </style>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										
-										<h2><a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness">FACTORS AFFECTING WORLD HAPPINESS<br />
-										</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" class="image fit"><img src="images/happiness.jpg" alt="" /></a>
-									<p>I created a dashboard using Tableau for world happiness and how factors like ECONOMY (Gdp per capita), FAMILY (size),
-										 GENOROSITY, and HEALTH (Life expectancy) affects the happiness score of various countries around the world.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" class="button">View Project</a></li>
-									</ul>
-								</article>
-								
-						
-							
-				
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-  									<p>Toronto,ON</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">647-574-4178</a></p>
-							</section>
-							<section>
-								  <h3>Email</h3>
- 								 <p><a href="mailto:alameensunmola@gmail.com">alameensunmola@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://twitter.com/ademola_aabs" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/alameensunmola" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+    </head>
+    <body class="is-preload">
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+        <div id="wrapper" class="fade-in">
 
-			</div>
+                <div id="intro">
+                        <div class="hero-container">
+                            
+                            <div class="hero-text">
+                                <h1>Alameen Sunmola<br />
+                                Portfolio</h1>
+                                <p>Data Analyst with hands-on experience transforming raw data into actionable business insights. 
+                                Skilled in SQL, Tableau, and Python, with a focus on data storytelling and helping organizations make data-driven decisions.</p>
+                                <ul class="actions">
+                                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                                </ul>
+                            </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                            <div class="hero-image">
+                                <div class="photo-ring">
+                                    <img src="images/alameen.jpg" alt="Alameen Sunmola" />
+                                </div>
+                            </div>
 
-	</body>
+                        </div>
+                        </div>
+
+                <header id="header">
+                        <a href="index.html" class="logo">Alameen Sunmola</a>
+                    </header>
+
+                <nav id="nav">
+                        <ul class="links">
+                            <li class="active"><a href="index.html">Projects</a></li>
+                            
+                        </ul>
+                        <ul class="icons">
+                            <li><a href="https://twitter.com/ademola_aabs" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+                            <li><a href="https://github.com/alameensunmola" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </nav>
+
+                <div id="main">
+
+                        <article class="post featured">
+                                <header class="major">
+                                    <h2><a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql">Covid19 Data Exploration<br />
+                                    </a></h2>
+                                    <p>In this Project, I performed data exploration using two COVID-19 datasets, one which contains COVID-19 Vaccination data, 
+                                       and the other which contains COVID-19 cases and deaths data using Microsoft SQL server. 
+                                       I was able to use my SQL knowledge to write queries that helped me gain meaningful insights from the datasets.</p>
+                                </header>
+                                <a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" class="image main"><img src="images/corona pic.jpg" alt="" /></a>
+                                <ul class="actions special">
+                                    <li><a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" class="button large">View Project</a></li>
+                                </ul>
+                            </article>
+
+                        <section class="posts">
+                                <article>
+                                    <header>
+                                        
+                                            <h2><a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness">FACTORS AFFECTING WORLD HAPPINESS<br />
+                                            </a></h2>
+                                    </header>
+                                    <a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" class="image fit"><img src="images/happiness.jpg" alt="" /></a>
+                                    <p>I created a dashboard using Tableau for world happiness and how factors like ECONOMY (Gdp per capita), FAMILY (size), 
+                                       GENOROSITY, and HEALTH (Life expectancy) affects the happiness score of various countries around the world.</p>
+                                    <ul class="actions special">
+                                        <li><a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" class="button">View Project</a></li>
+                                    </ul>
+                                </article>
+                                
+                        
+                            
+                    
+                
+                        <section class="split contact">
+                            <section class="alt">
+                                <h3>Location</h3>
+                                        <p>Toronto,ON</p>
+                            </section>
+                            <section>
+                                <h3>Phone</h3>
+                                <p><a href="#">647-574-4178</a></p>
+                            </section>
+                            <section>
+                                 <h3>Email</h3>
+                                 <p><a href="mailto:alameensunmola@gmail.com">alameensunmola@gmail.com</a></p>
+                            </section>
+                            <section>
+                                <h3>Social</h3>
+                                <ul class="icons alt">
+                                    <li><a href="https://twitter.com/ademola_aabs" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+                                    <li><a href="https://github.com/alameensunmola" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                                </ul>
+                            </section>
+                        </section>
+                    </footer>
+
+                <div id="copyright">
+                        <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+                    </div>
+
+            </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
-
-
-
-
