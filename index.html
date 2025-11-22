@@ -1,202 +1,425 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Alameen Sunmola Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        
-        <style>
-            /* Container to align Text and Image side-by-side */
-            .hero-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 50px; /* Space between text and image */
-                max-width: 1200px;
-                margin: 0 auto;
-                text-align: left; /* Align text to the left */
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="Portfolio of Alameen Sunmola, a Data Analyst specializing in SQL, Tableau, and Python for data-driven business insights.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alameen | Data Analyst</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-            .hero-text {
-                flex: 1; /* Takes up remaining space */
-            }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-            /* Ensure the title looks good in this layout */
-            .hero-text h1 {
-                font-size: 3.5rem;
-                line-height: 1.1;
-                margin-bottom: 20px;
-            }
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --card:#0b0b0b;
+      --muted:#9aa1a6;
+      --accent:#6aa84f;
+      --accent-2:#3b7a57;
+      --white:#ffffff;
+      --container-width:1100px;
+    }
+    *{box-sizing:border-box}
+    
+    /* FONT SETTINGS */
+    body, input, select, textarea {
+        margin:0;
+        font-family: 'Open Sans', sans-serif;
+        background:linear-gradient(180deg,var(--bg),#070707);
+        color:var(--white);
+        -webkit-font-smoothing:antialiased;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: -0.02em;
+    }
 
-            /* Circular Image Styling */
-            .hero-image {
-                flex: 0 0 300px; /* Fixed width for image area */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+    .site {
+      width:90%;
+      max-width:var(--container-width);
+      margin:0 auto;
+      padding:28px 0 80px;
+    }
 
-            .photo-ring {
-                width: 300px;
-                height: 300px;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.2); /* The translucent outer ring */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                backdrop-filter: blur(5px);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            }
+    /* --- HERO --- */
+    .hero {
+      background: transparent;
+      display:flex;
+      gap:32px;
+      align-items:center;
+      padding:36px;
+      border-radius:8px;
+      position:relative;
+      overflow:visible;
+    }
 
-            .photo-ring img {
-                width: 270px;
-                height: 270px;
-                object-fit: cover;
-                border-radius: 50%;
-                border: 6px solid #ffffff; /* The solid white inner border */
-                display: block;
-            }
+    .hero-inner {
+      display:flex;
+      gap:36px;
+      align-items:center;
+      width:100%;
+    }
 
-            /* Responsive Design: Stack them on mobile */
-            @media screen and (max-width: 980px) {
-                .hero-container {
-                    flex-direction: column-reverse; /* Image on top, text below */
-                    text-align: center;
-                    gap: 30px;
-                }
-                
-                .hero-text h1 {
-                    font-size: 2.5rem; 
-                }
+    .hero-left {
+      flex:1;
+      padding-right:20px;
+      max-width: 65%;
+    }
 
-                .photo-ring {
-                    width: 220px;
-                    height: 220px;
-                }
-                .photo-ring img {
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-        </style>
+    .eyebrow {
+      color: var(--muted);
+      font-size:14px;
+      margin-bottom:10px;
+    }
 
-    </head>
-    <body class="is-preload">
+    .headline {
+      font-size:48px;
+      line-height:1;
+      margin:0 0 12px;
+      color:var(--accent);
+      font-weight:700;
+    }
 
-        <div id="wrapper" class="fade-in">
+    .subhead {
+      color:var(--muted);
+      font-size:18px;
+      margin-bottom:18px;
+      max-width:720px;
+      line-height: 1.6;
+    }
 
-                <div id="intro">
-                        <div class="hero-container">
-                            
-                            <div class="hero-text">
-                                <h1>Alameen Sunmola<br />
-                                Portfolio</h1>
-                                <p>Data Analyst with hands-on experience transforming raw data into actionable business insights. 
-                                Skilled in SQL, Tableau, and Python, with a focus on data storytelling and helping organizations make data-driven decisions.</p>
-                                <ul class="actions">
-                                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-                                </ul>
-                            </div>
+    .cta-row {
+      margin-top:18px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
 
-                            <div class="hero-image">
-                                <div class="photo-ring">
-                                    <img src="images/alameen.jpg" alt="Alameen Sunmola" />
-                                </div>
-                            </div>
+    .btn {
+      background:var(--accent);
+      color:var(--white);
+      padding:10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btn.secondary {
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--muted);
+      padding:10px 14px;
+    }
 
-                        </div>
-                        </div>
+    /* RIGHT PHOTO STYLING */
+    .hero-photo {
+      width:260px;
+      height:260px;
+      flex:0 0 260px;
+      margin-left:auto;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
 
-                <header id="header">
-                        <a href="index.html" class="logo">Alameen Sunmola</a>
-                    </header>
+    .photo-ring {
+      width:320px;
+      height:320px;
+      border-radius:50%;
+      background:var(--white); /* Outer Ring White */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
 
-                <nav id="nav">
-                        <ul class="links">
-                            <li class="active"><a href="index.html">Projects</a></li>
-                            
-                        </ul>
-                        <ul class="icons">
-                            <li><a href="https://twitter.com/ademola_aabs" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-                            <li><a href="https://github.com/alameensunmola" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                        </ul>
-                    </nav>
+    .photo-ring img{
+      width:220px;
+      height:220px;
+      object-fit:cover;
+      border-radius:50%;
+      border:8px solid var(--white); /* Inner Border White */
+      display:block;
+    }
+    
 
-                <div id="main">
+    /* --- ABOUT --- */
+    .section {
+      margin-top:36px;
+      background:var(--card);
+      border-radius:8px;
+      padding:30px;
+    }
 
-                        <article class="post featured">
-                                <header class="major">
-                                    <h2><a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql">Covid19 Data Exploration<br />
-                                    </a></h2>
-                                    <p>In this Project, I performed data exploration using two COVID-19 datasets, one which contains COVID-19 Vaccination data, 
-                                       and the other which contains COVID-19 cases and deaths data using Microsoft SQL server. 
-                                       I was able to use my SQL knowledge to write queries that helped me gain meaningful insights from the datasets.</p>
-                                </header>
-                                <a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" class="image main"><img src="images/corona pic.jpg" alt="" /></a>
-                                <ul class="actions special">
-                                    <li><a href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" class="button large">View Project</a></li>
-                                </ul>
-                            </article>
+    .grid {
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
 
-                        <section class="posts">
-                                <article>
-                                    <header>
-                                        
-                                            <h2><a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness">FACTORS AFFECTING WORLD HAPPINESS<br />
-                                            </a></h2>
-                                    </header>
-                                    <a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" class="image fit"><img src="images/happiness.jpg" alt="" /></a>
-                                    <p>I created a dashboard using Tableau for world happiness and how factors like ECONOMY (Gdp per capita), FAMILY (size), 
-                                       GENOROSITY, and HEALTH (Life expectancy) affects the happiness score of various countries around the world.</p>
-                                    <ul class="actions special">
-                                        <li><a href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" class="button">View Project</a></li>
-                                    </ul>
-                                </article>
-                                
-                        
-                            
-                    
-                
-                        <section class="split contact">
-                            <section class="alt">
-                                <h3>Location</h3>
-                                        <p>Toronto,ON</p>
-                            </section>
-                            <section>
-                                <h3>Phone</h3>
-                                <p><a href="#">647-574-4178</a></p>
-                            </section>
-                            <section>
-                                 <h3>Email</h3>
-                                 <p><a href="mailto:alameensunmola@gmail.com">alameensunmola@gmail.com</a></p>
-                            </section>
-                            <section>
-                                <h3>Social</h3>
-                                <ul class="icons alt">
-                                    <li><a href="https://twitter.com/ademola_aabs" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-                                    <li><a href="https://github.com/alameensunmola" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                                </ul>
-                            </section>
-                        </section>
-                    </footer>
+    .about-text p{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      margin-bottom:12px;
+    }
 
-                <div id="copyright">
-                        <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-                    </div>
+    .bullets {
+      margin-top:12px;
+      color:var(--white);
+      font-weight:600;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .bullets li{list-style:none; color:var(--muted); font-weight:500; padding-left:0}
 
+    /* PROFILE CARD */
+    .profile-card {
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      padding:18px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .profile-card h4 { margin:0 0 10px; color:var(--accent); }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .tag { background:rgba(255,255,255,0.03); padding:8px 12px; border-radius:20px; color:var(--muted); font-weight:600; font-size:13px; border:1px solid rgba(255,255,255,0.02) }
+
+    /* --- PROJECTS GRID --- */
+    .projects {
+      margin-top:28px;
+    }
+    .projects-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:18px;
+      margin-top:14px;
+    }
+    .proj {
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:16px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+      min-height:160px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .proj h3 { margin:0 0 8px; color:var(--accent); font-size:18px }
+    .proj p { margin:0 0 12px; color:var(--muted); font-size:14px; line-height:1.5 }
+    .proj .proj-footer { display:flex; justify-content:space-between; align-items:center; gap:12px }
+    .proj a.view { text-decoration:none; background:var(--accent-2); color:white; padding:8px 10px; border-radius:8px; font-weight:600 }
+
+    /* Responsive */
+    @media (max-width:960px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero-left{ max-width:100% }
+      .hero-photo{ display:none } /* hide large image on small screens to save space */
+      .headline{ font-size:34px }
+    }
+
+    @media (max-width:560px){
+      .headline{ font-size:28px }
+      .hero-inner{ flex-direction:column; gap:18px; align-items:flex-start }
+      .hero-left{ order:1 }
+      footer { flex-direction: column; gap: 20px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="site">
+
+    <header class="hero" aria-label="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="eyebrow">Hello! My name is</div>
+          <h1 class="headline">Alameen Sunmola</h1>
+          <p class="subhead">
+            Hi, I’m Alameen — a data analyst with a background in Economics and hands-on
+            experience turning raw data into clear, useful insights. I enjoy digging into datasets,
+            finding patterns, and building visuals that help people understand what’s really happening.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn" href="#about">About Me</a>
+            <a class="btn secondary" href="#projects">Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-photo" aria-hidden="true">
+          <div class="photo-ring">
+            <img src="images/alameen.jpg" alt="Alameen">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="section">
+      <div class="grid">
+        <div>
+          <h2 style="color:var(--white); margin:0 0 12px;">About Me</h2>
+          <div class="about-text">
+            <p>
+              My projects focus on:
+            </p>
+            <ul class="bullets">
+              <li>• cleaning and organizing real-world data</li>
+              <li>• exploring trends using SQL and Python</li>
+              <li>• building dashboards that make decision-making easier</li>
+              <li>• telling a clear story with numbers</li>
+            </ul>
+
+            <p>
+              What drives me is simple: I enjoy finding solutions with data and creating work that’s
+              practical, clear, and easy to understand. This portfolio highlights the projects I’ve built
+              to strengthen my analytical thinking, expand my technical skills, and show how I approach
+              real business questions using data.
+            </p>
+          </div>
+        </div>
+
+        <aside class="profile-card" aria-label="profile card">
+          <h4>Key skills</h4>
+          <div class="skill-tags">
+            <span class="tag">SQL (Postgres / MySQL)</span>
+            <span class="tag">Python (Pandas / NumPy)</span>
+            <span class="tag">Tableau / Power BI</span>
+            <span class="tag">Data Cleaning</span>
+            <span class="tag">Customer Service</span>
+            <span class="tag">Attention to Detail</span>
+            <span class="tag">Troubleshooting</span>
+            <span class="tag">Problem Solving</span>
+          </div>
+
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <h4 style="margin: 0 0 12px; color: var(--accent);">Certifications</h4>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="color: var(--white); font-weight:600; font-size:14px;">CompTIA A+</span>
+              <span style="font-size: 11px; color: var(--accent); border: 1px solid var(--accent); padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">In Progress</span>
             </div>
+          </div>
 
-        <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+          <div style="margin-top:24px; display:flex; gap:10px; align-items:center; justify-content:space-between;">
+            <div style="color:var(--muted); font-size:13px">Location</div>
+            <div style="font-weight:700">Toronto, ON</div>
+          </div>
 
-    </body>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <h2 style="margin:0; color:var(--white)">Featured projects</h2>
+      <div class="projects-grid">
+
+        <div class="proj">
+          <div>
+            <h3>Covid19 Data Exploration</h3>
+            <p>Used SQL Server to perform data exploration on global COVID-19 datasets (vaccinations, cases, deaths). Utilized complex queries to extract meaningful insights.</p>
+          </div>
+          <div class="proj-footer">
+            <a class="view" href="https://github.com/alameensunmola/Covid-19-portfolio-project/blob/main/project.sql" target="_blank" rel="noopener">View project</a>
+            <div style="color:var(--muted); font-size:13px">Tableau • SQL</div>
+          </div>
+        </div>
+        <!--
+        <div class="proj">
+          <div>
+            <h3>Customer Churn Model</h3>
+            <p>Built a logistic regression model using Python (scikit-learn) to predict customer churn probability based on demographic data.</p>
+          </div>
+          <div class="proj-footer">
+            <a class="view" href="#" target="_blank" rel="noopener">View project</a>
+            <div style="color:var(--muted); font-size:13px">Python • ML</div>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div>
+            <h3>Portfolio Website</h3>
+            <p>This public-facing portfolio website. Hosted on GitHub Pages, showcasing responsive design and project aggregation.</p>
+          </div>
+          <div class="proj-footer">
+            <a class="view" href="https://github.com/alameensunmola" target="_blank" rel="noopener">View code</a>
+            <div style="color:var(--muted); font-size:13px">HTML • CSS</div>
+          </div>
+        </div> -->
+        <div class="proj">
+          <div>
+            <h3>Factors Affecting World Happiness</h3>
+            <p>Interactive Tableau dashboard analyzing how economy, family, and health metrics correlate with happiness scores globally.</p>
+          </div>
+          <div class="proj-footer">
+            <a class="view" href="https://public.tableau.com/app/profile/alameen.sunmola/viz/Factorsthataffectworldhappiness/WorldHappiness" target="_blank" rel="noopener">View project</a>
+            <div style="color:var(--muted); font-size:13px">Tableau</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 40px;">
+      
+        <div>
+          <h3 style="color:var(--white); font-size:16px; margin:0 0 15px 0;">Contact</h3>
+          
+          <div style="display:flex; flex-direction:column; gap:10px; color:var(--muted);">
+            <a href="tel:6475744178" style="color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:10px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">
+              <i class="fas fa-phone" style="width:20px; text-align:center;"></i> 
+              647-574-4178
+            </a>
+  
+            <a href="mailto:alameensunmola@gmail.com" style="color:var(--muted); text-decoration:none; display:flex; align-items:center; gap:10px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">
+              <i class="fas fa-envelope" style="width:20px; text-align:center;"></i> 
+              alameensunmola@gmail.com
+            </a>
+          </div>
+        </div>
+  
+        <div>
+          <h3 style="color:var(--white); font-size:16px; margin:0 0 15px 0;">Social</h3>
+          
+          <ul style="list-style:none; padding:0; margin:0; display:flex; gap:20px;">
+              
+              <li>
+                  <a href="https://twitter.com/ademola_aabs" target="_blank" rel="noopener" aria-label="Twitter" style="color:var(--muted); font-size:24px; transition: all 0.2s;" onmouseover="this.style.color='#1DA1F2'; this.style.transform='translateY(-3px)'" onmouseout="this.style.color='var(--muted)'; this.style.transform='translateY(0)'">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+              </li>
+  
+              <li>
+                  <a href="https://www.linkedin.com/in/alameen-sunmola-4a6727163/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:var(--muted); font-size:24px; transition: all 0.2s;" onmouseover="this.style.color='#0077b5'; this.style.transform='translateY(-3px)'" onmouseout="this.style.color='var(--muted)'; this.style.transform='translateY(0)'">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+              </li>
+  
+              <li>
+                  <a href="https://github.com/alameensunmola" target="_blank" rel="noopener" aria-label="GitHub" style="color:var(--muted); font-size:24px; transition: all 0.2s;" onmouseover="this.style.color='#ffffff'; this.style.transform='translateY(-3px)'" onmouseout="this.style.color='var(--muted)'; this.style.transform='translateY(0)'">
+                      <i class="fab fa-github"></i>
+                  </a>
+              </li>
+  
+          </ul>
+        </div>
+  
+      </footer>
+  
+      <div style="text-align:center; color:var(--muted); padding-bottom:40px; font-size:13px; opacity:0.6; margin-top: 40px;">
+        © <span id="year"></span> Alameen 
+      </div>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
